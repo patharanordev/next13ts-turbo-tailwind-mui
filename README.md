@@ -10,6 +10,7 @@
 - 📈 Absolute Import and Path Alias — Import components using `@/` prefix
 - 💖 Prettier — Format your code consistently
 - 👀 Default Open Graph — Awesome open graph generated using [og](https://github.com/theodorusclarence/og), fork it and deploy!
+- 💡 MUI — or [Material UI](https://mui.com/material-ui/getting-started/installation/), Ready-to-use foundational React components
 
 ## Preparation
 
@@ -32,7 +33,6 @@ pnpm i && pnpm run dev
 
 - 🗺 [Site Map](https://github.com/iamvishnusankar/next-sitemap#readme) — Automatically generate sitemap.xml
 - 🌐 [i18n](https://dev.to/adrai/i18n-with-nextjs-13-and-app-directory-18dm)
-- 💡 [Mui](https://levelup.gitconnected.com/using-material-ui-with-next-js-13-and-tailwind-css-41c201855dcf)
 
 ## Issue(s)
 
