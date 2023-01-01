@@ -4,22 +4,24 @@ import '@/styles/mui.css';
 import '@/styles/colors.css';
 import React from 'react';
 
-import { darkTheme } from "@/themes/theme-mui";
-import { ThemeProvider, CssBaseline } from "@mui/material";
+import { themes } from '@/themes/theme-mui';
+import { ThemeProvider, CssBaseline } from '@mui/material';
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
   return (
     <html>
       <head>
         <title>Example — Mui</title>
       </head>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={themes}>
         <CssBaseline />
         <body>
+          {/* <SwitchThemeButton colorMode={colorMode} /> */}
           {children}
         </body>
       </ThemeProvider>
