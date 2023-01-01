@@ -3,10 +3,14 @@ const { fontFamily } = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  // corePlugins: {
+  //   preflight: false,
+  // },
   content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-    './page/**/*.{js,ts,jsx,tsx}',
-    './ui/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx,css}',
+    './page/**/*.{js,ts,jsx,tsx,css}',
+    './ui/**/*.{js,ts,jsx,tsx,css}',
+    './themes/**/*.{js,ts,jsx,tsx,css}',
   ],
   theme: {
     extend: {
