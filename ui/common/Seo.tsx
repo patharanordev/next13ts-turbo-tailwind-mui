@@ -1,7 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
@@ -10,14 +9,16 @@ const defaultMeta = {
   description:
     'A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
-  url: 'https://tsnext-tw.thcl.dev',
+  url: process.env.NEXT_PUBLIC_HOST,
   type: 'website',
   robots: 'follow, index',
+
+  date: '',
   /**
    * No need to be filled, will be populated with openGraph function
    * If you wish to use a normal image, just specify the path below
    */
-  image: 'https://tsnext-tw.thcl.dev/images/large-og.png',
+  image: `${process.env.NEXT_PUBLIC_HOST}/images/large-og.png`,
 };
 
 type SeoProps = {
@@ -27,14 +28,19 @@ type SeoProps = {
 
 export default function Seo(props: SeoProps) {
   
-  const router = useRouter();
-  const [meta, setMeta] = useState(defaultMeta)
-  const [title, setTitle] = useState(meta.title)
+  const [meta, setMeta] = useState(defaultMeta);
+  const [title, setTitle] = useState(meta.title);
+  const [path, setPath] = useState('');
 
   useEffect(() => {
     setMeta({ ...defaultMeta, ...props })
     setTitle(`${props.templateTitle} | ${meta.siteName}`)
   }, [props])
+
+  useEffect(() => {
+    const location = `${window.location.pathname}${window.location.search}`
+    setPath(location)
+  }, [])
 
   // Use siteName if there is templateTitle
   // but show full title if there is none
@@ -51,8 +57,8 @@ export default function Seo(props: SeoProps) {
       <title>{title}</title>
       <meta name='robots' content={meta.robots} />
       <meta content={meta.description} name='description' />
-      <meta property='og:url' content={`${meta.url}${router.asPath}`} />
-      <link rel='canonical' href={`${meta.url}${router.asPath}`} />
+      <meta property='og:url' content={`${meta.url}${path}`} />
+      <link rel='canonical' href={`${meta.url}${path}`} />
       {/* Open Graph */}
       <meta property='og:type' content={meta.type} />
       <meta property='og:site_name' content={meta.siteName} />
