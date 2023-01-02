@@ -11,6 +11,7 @@
 - 💖 Prettier — Format your code consistently
 - 👀 Default Open Graph — Awesome open graph generated using [og](https://github.com/theodorusclarence/og), fork it and deploy!
 - 💡 MUI — or [Material UI](https://mui.com/material-ui/getting-started/installation/), Ready-to-use foundational React components
+- 🗺 [Site Map](https://github.com/iamvishnusankar/next-sitemap#readme) — Automatically generate sitemap.xml
 
 ## Preparation
 
@@ -31,8 +32,39 @@ pnpm i && pnpm run dev
 
 ## TODO
 
-- 🗺 [Site Map](https://github.com/iamvishnusankar/next-sitemap#readme) — Automatically generate sitemap.xml
 - 🌐 [i18n](https://dev.to/adrai/i18n-with-nextjs-13-and-app-directory-18dm)
+
+## Sitemap
+
+Re-generate sitemap, just run `pnpm build && pnpm postbuild` or rebuild all with SEO `pnpm run buildwithseo`.
+
+**Ref**. sitemap : `/public/sitemap-0.xml`
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+    <url><loc>http://localhost:3000/examples/nextjs13/route-groups</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/components</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/nextjs13/context</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/nextjs13/error-handling</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/nextjs13/hooks</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/nextjs13/layouts</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/nextjs13/loading</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/nextjs13</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/nextjs13/styling/css-modules</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/nextjs13/streaming</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/nextjs13/styling/global-css</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/nextjs13/styling</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/nextjs13/styling/styled-components</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/nextjs13/styling/styled-jsx</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/nextjs13/route-groups/checkout</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/nextjs13/styling/tailwind</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/nextjs13/route-groups/blog</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/mui</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+    <url><loc>http://localhost:3000/examples/mui/other-page</loc><lastmod>2023-01-02T11:27:51.989Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>
+```
 
 ## Issue(s)
 

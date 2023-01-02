@@ -21,7 +21,7 @@ export default function SwitchThemeButton(props:Props) {
 
     const theme = useTheme();
     const [colorMode, setColorMode] = React.useState<ColorMode>(DefaultColorMode)
-    const [ThemeIcon, setThemeIcon] = React.useState<Brightness7Icon | Brightness4Icon>(Brightness4Icon)
+    const [ThemeIcon, setThemeIcon] = React.useState<typeof Brightness7Icon | typeof Brightness4Icon>(Brightness4Icon)
     
     React.useEffect(() => {
         setColorMode(props.colorMode)
@@ -45,7 +45,7 @@ export default function SwitchThemeButton(props:Props) {
             }}
         >
             {theme.palette.mode} mode
-            <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
+            <IconButton sx={{ ml: 1 }} onClick={() => { colorMode.toggleColorMode() }} color="inherit">
                 <ThemeIcon />
             </IconButton>
         </Box>
