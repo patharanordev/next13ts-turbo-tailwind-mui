@@ -2,13 +2,13 @@
 
 ## Features
 
-- ⚡️ Next.js 13 with new directory structure
-- 🚀 Turbopack
-- ⚛️ React 18
-- ✨ TypeScript
-- 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the **primary** color
+- <img src="https://emojis.slackmojis.com/emojis/images/1643514489/4730/nextjs.jpeg?1643514489" width="15" />&nbsp;Next.js 13 with new directory structure
+- <img src="https://emojis.slackmojis.com/emojis/images/1666779013/61985/turbopack.png?1666779013" width="15" />&nbsp;Turbopack
+- <img src="https://emojis.slackmojis.com/emojis/images/1643514155/1161/react.png?1643514155" width="15" />&nbsp;React 18
+- <img src="https://emojis.slackmojis.com/emojis/images/1643514173/1383/typescript.png?1643514173" width="15" />&nbsp;TypeScript
+- <img src="https://emojis.slackmojis.com/emojis/images/1643515045/10754/tailwindcss.png?1643515045" width="15" />&nbsp;Tailwind CSS 3 — Configured with CSS Variables to extend the **primary** color
 - 📈 Absolute Import and Path Alias — Import components using `@/` prefix
-- 💖 Prettier — Format your code consistently
+- <img src="https://emojis.slackmojis.com/emojis/images/1643514389/3640/prettier.png?1643514389" width="15" />&nbsp;Prettier — Format your code consistently
 - 👀 Default Open Graph — Awesome open graph generated using [og](https://github.com/theodorusclarence/og), fork it and deploy!
 - 💡 MUI — or [Material UI](https://mui.com/material-ui/getting-started/installation/), Ready-to-use foundational React components
 - 🗺 [Site Map](https://github.com/iamvishnusankar/next-sitemap#readme) — Automatically generate sitemap.xml
@@ -32,6 +32,7 @@ pnpm i && pnpm run dev
 
 ## TODO
 
+- <img src="https://emojis.slackmojis.com/emojis/images/1643514082/390/redux.png?1643514082" width="15" />&nbsp;Redux
 - 🌐 [i18n](https://dev.to/adrai/i18n-with-nextjs-13-and-app-directory-18dm)
 
 ## Sitemap
