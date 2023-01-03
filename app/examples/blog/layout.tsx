@@ -10,11 +10,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
-      <Seo
-        templateTitle='Components'
-        description='Pre-built components with awesome default'
-      />
+    <html lang='en'>
+      <head>
+        <Seo
+          meta={{
+            title: 'Example Blog',
+            siteName: 'Example Blog',
+            description: 'Blog description',
+            type: 'website',
+            robots: 'follow, index'
+          }}
+        />
+      </head>
       <body className="overflow-y-scroll bg-zinc-900">
         {children}
       </body>

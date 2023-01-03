@@ -11,13 +11,15 @@ export default function RootLayout({
 }) {
   return (
     <html>
+      <head>
         <Seo
         templateTitle='Landing page'
         description='Landing page layout'
         />
-        <body className="overflow-y-scroll bg-zinc-900">
-            {children}
-        </body>
+      </head>
+      <body className="overflow-y-scroll bg-zinc-900">
+        {children}
+      </body>
     </html>
   );
 }
