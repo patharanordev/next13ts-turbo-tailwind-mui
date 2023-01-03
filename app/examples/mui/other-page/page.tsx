@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Button, Grid, Stack } from '@mui/material';
+import { Grid } from '@mui/material';
 
 export default function Home() {
     return (

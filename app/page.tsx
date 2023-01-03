@@ -2,55 +2,56 @@ import * as React from 'react';
 
 import Layout from '@/ui/common/layout/Layout';
 import ArrowLink from '@/ui/common/links/ArrowLink';
-import ButtonLink from '@/ui/common/links/ButtonLink';
 import UnderlineLink from '@/ui/common/links/UnderlineLink';
-import UnstyledLink from '@/ui/common/links/UnstyledLink';
-import Seo from '@/ui/common/Seo';
 
-// !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
-// Before you begin editing, follow all comments with `STARTERCONF`,
-// to customize the default configuration.
-
-export default function HomePage() {
+export default function LandingPage() {
   return (
     <Layout>
       <main>
         <section className='bg-white'>
           <div className='layout flex min-h-screen flex-col items-center justify-center text-center'>
             <h1 className='mt-4'>
-              Next.js + Tailwind CSS + TypeScript Starter
+              NextJS13/Typescript + Turbopack + TailwindCSS + Mui
             </h1>
             <p className='mt-2 text-sm text-gray-800'>
-              A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
-              Import, Seo, Link component, pre-configured with Husky{' '}
+              A starter for NextJS13 + Turbopack, TypeScript, TailwindCSS, and MUI with examples
             </p>
             <p className='mt-2 text-sm text-gray-700'>
-              <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
+              <ArrowLink href='https://github.com/patharanordev/next13ts-turbo-tailwind-mui'>
                 See the repository
               </ArrowLink>
             </p>
 
-            <ButtonLink className='mt-6' href='/components' variant='light'>
-              See all components
-            </ButtonLink>
+            <br/>
 
-            <UnstyledLink
-              href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
-              className='mt-4'
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                width='92'
-                height='32'
-                src='https://vercel.com/button'
-                alt='Deploy with Vercel'
-              />
-            </UnstyledLink>
+            <h3 className='mt-4'>
+              Examples
+            </h3>
+            <p className='mt-2 text-sm text-gray-700'>
+              <ArrowLink href='/examples/nextjs13'>
+                NextJS13
+              </ArrowLink>
+            </p>
+            <p className='mt-2 text-sm text-gray-700'>
+              <ArrowLink href='/examples/blog'>
+                Blog & SEO
+              </ArrowLink>
+            </p>
+            <p className='mt-2 text-sm text-gray-700'>
+              <ArrowLink href='/examples/mui'>
+                MUI (Material UI)
+              </ArrowLink>
+            </p>
+            <p className='mt-2 text-sm text-gray-700'>
+              <ArrowLink href='/examples/tailwindcss'>
+                TailwindCSS
+              </ArrowLink>
+            </p>
 
             <footer className='absolute bottom-2 text-gray-700'>
               © {new Date().getFullYear()} By{' '}
-              <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-                Theodorus Clarence
+              <UnderlineLink href='https://patharanor.dev'>
+                PatharaNor
               </UnderlineLink>
             </footer>
           </div>
