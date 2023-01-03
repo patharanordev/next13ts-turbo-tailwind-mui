@@ -14,9 +14,9 @@ export default function RootLayout({
       <head>
         <Seo
           meta={{
-            title: 'Example — Blog',
-            siteName: 'Example — Blog',
-            description: 'Blog description',
+            title: 'Example — TailwindCSS',
+            siteName: 'Example — TailwindCSS',
+            description: 'TailwindCSS description',
             type: 'website',
             robots: 'follow, index'
           }}

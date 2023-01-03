@@ -1,5 +1,6 @@
 import '@/styles/globals.css';
 import React from 'react';
+import Seo from '@/ui/common/Seo';
 import AddressBar from '@/ui/AddressBar';
 import GlobalNav from './GlobalNav';
 
@@ -11,7 +12,15 @@ export default function RootLayout({
   return (
     <html>
       <head>
-        <title>Example — Next.js Turbopack App Directory Playground</title>
+        <Seo
+          meta={{
+            title: 'Example — NextJS13 + Turbopack',
+            siteName: 'Example — NextJS13 + Turbopack',
+            description: 'Next.js Turbopack App Directory Playground',
+            type: 'website',
+            robots: 'follow, index'
+          }}
+        />
       </head>
       <body className="overflow-y-scroll bg-zinc-900">
         <div className="grid grid-cols-[1fr,minmax(auto,240px),min(800px,100%),1fr] gap-x-8 py-8">

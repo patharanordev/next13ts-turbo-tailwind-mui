@@ -35,6 +35,7 @@ pnpm i && pnpm run dev
 - [Nextjs13](app/examples/nextjs13)
 - [Blog & SEO](app/examples/blog)
 - [MUI](app/examples/mui)
+- [TailwindCSS](app/examples/tailwindcss)
 
 ## TODO
 
