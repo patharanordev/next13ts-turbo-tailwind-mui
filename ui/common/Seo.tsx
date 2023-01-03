@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 
 // !STARTERCONF Change these default meta
-const defaultMeta = {
+const defaultMeta:any = {
   title: 'Next.js + Tailwind CSS + TypeScript Starter',
   siteName: 'Next.js + Tailwind CSS + TypeScript Starter',
   description:
@@ -32,15 +32,24 @@ export default function Seo(props: SeoProps) {
   const [title, setTitle] = useState(meta.title);
   const [path, setPath] = useState('');
 
+  // Initial
   useEffect(() => {
-    setMeta({ ...defaultMeta, ...props })
-    setTitle(`${props.templateTitle} | ${meta.siteName}`)
+    setMeta({ ...props.meta })
+    document.title = props.templateTitle
+    ? props.templateTitle
+    : meta.title
   }, [props])
 
   useEffect(() => {
     const location = `${window.location.pathname}${window.location.search}`
     setPath(location)
   }, [])
+
+  // Ref to meta
+  useEffect(() => {
+    setTitle(meta.title)
+    document.title = meta.title;
+  }, [meta])
 
   // Use siteName if there is templateTitle
   // but show full title if there is none
@@ -53,50 +62,54 @@ export default function Seo(props: SeoProps) {
   // });
 
   return (
-    <head>
-      <title>{title}</title>
-      <meta name='robots' content={meta.robots} />
-      <meta content={meta.description} name='description' />
-      <meta property='og:url' content={`${meta.url}${path}`} />
-      <link rel='canonical' href={`${meta.url}${path}`} />
+    <>
+      <meta name='robots' key='robots' content={meta.robots} />
+      <meta name='description' key='description' content={meta.description} />
+      <meta property='og:url' key='og:url' content={`${meta.url}${path}`} />
+
       {/* Open Graph */}
-      <meta property='og:type' content={meta.type} />
-      <meta property='og:site_name' content={meta.siteName} />
-      <meta property='og:description' content={meta.description} />
-      <meta property='og:title' content={title} />
-      <meta name='image' property='og:image' content={meta.image} />
+      <meta property='og:type' key='og:type' content={meta.type} />
+      <meta property='og:site_name' key='og:site_name' content={meta.siteName} />
+      <meta property='og:description' key='og:description' content={meta.description} />
+      <meta property='og:title' key='og:title' content={title} />
+      <meta property='og:image' key='og:image' name='image' content={meta.image} />
+
       {/* Twitter */}
-      <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:card' key='twitter:card' content='summary_large_image' />
       {/* // !STARTERCONF Remove or change to your handle */}
       {/* <meta name='twitter:site' content='@th_clarence' /> */}
-      <meta name='twitter:title' content={title} />
-      <meta name='twitter:description' content={meta.description} />
-      <meta name='twitter:image' content={meta.image} />
+      <meta name='twitter:title' key='twitter:title' content={title} />
+      <meta name='twitter:description' key='twitter:description' content={meta.description} />
+      <meta name='twitter:image' key='twitter:image' content={meta.image} />
       {meta.date && (
         <>
-          <meta property='article:published_time' content={meta.date} />
+          <meta property='article:published_time' key='article:published_time' content={meta.date} />
           <meta
             name='publish_date'
+            key='og:publish_date'
             property='og:publish_date'
             content={meta.date}
           />
           {/* // !STARTERCONF Remove or change to your name */}
           <meta
             name='author'
+            key='article:author'
             property='article:author'
             content='Theodorus Clarence'
           />
         </>
       )}
 
+      <link rel='canonical' href={`${meta.url}${path}`} />
+
       {/* Favicons */}
       {favicons.map((linkProps) => (
         <link key={linkProps.href} {...linkProps} />
       ))}
-      <meta name='msapplication-TileColor' content='#ffffff' />
-      <meta name='msapplication-config' content='/favicon/browserconfig.xml' />
-      <meta name='theme-color' content='#ffffff' />
-    </head>
+      <meta name='msapplication-TileColor' key='msapplication-TileColor' content='#ffffff' />
+      <meta name='msapplication-config' key='msapplication-config' content='/favicon/browserconfig.xml' />
+      <meta name='theme-color' key='theme-color' content='#ffffff' />
+    </>
   );
 }
 
