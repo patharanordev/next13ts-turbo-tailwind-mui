@@ -7,10 +7,10 @@ module.exports = {
   //   preflight: false,
   // },
   content: [
-    './app/**/*.{js,ts,jsx,tsx,css}',
-    './page/**/*.{js,ts,jsx,tsx,css}',
-    './ui/**/*.{js,ts,jsx,tsx,css}',
-    './themes/**/*.{js,ts,jsx,tsx,css}',
+    './app/**/*.{js,ts,jsx,tsx}',
+    './page/**/*.{js,ts,jsx,tsx}',
+    './ui/**/*.{js,ts,jsx,tsx}',
+    './themes/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
